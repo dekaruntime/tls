@@ -1,0 +1,6 @@
+// Host-granted TLS. upgrade consumes a TCP rid and returns a TLS rid.
+// Read/write/close the result with @deka/tcp (same net handle table).
+
+export fn upgrade(handle: number, server_name: string) {
+  return bridge tls.upgrade(handle, server_name)
+}
